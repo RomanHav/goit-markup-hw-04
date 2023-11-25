@@ -200,7 +200,7 @@ ul {
 .integral-parts-img {
     border: 1px solid  #8E8F99;
     border-radius: 4px;
-    margin: 24px 100px;
+    padding: 24px 100px;
 }
 .parts-title {
     color: #2e2f42;
@@ -248,7 +248,25 @@ ul {
     line-height: 1.5;
     text-align: center;
 }
+.our-team-links-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 24px;
+}
+.se {
+    width: 100%;
+    height: 100%;
+}
+.our-team-link-part {
 
+}
+.our-team-links {
+    background-color:  #4D5AE5;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+}
 
 /*Секція Our portfolio */
 .our-portfolio .subtitle {
