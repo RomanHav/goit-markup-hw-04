@@ -78,6 +78,7 @@ body {
     gap: 40px;
 }
 .nav-link {
+    position: relative;
     display: block;
     padding-top: 24px;
     padding-bottom: 24px;
@@ -86,7 +87,18 @@ body {
     line-height: 1.5;
     letter-spacing: 0.02em;
     text-decoration: none;
+    transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
+.nav-link:hover::after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    content: "";
+    width: 48px;
+    height: 4px;
+    border-radius: 2px;
+    background-color: #404BBF;
+}
 .nav-link:hover,
 .nav-link:focus {
     color: #404BBF;
@@ -112,6 +124,7 @@ body {
     line-height: 1.5;    
     letter-spacing: 0.02em;
     text-decoration: none;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .contact-link:hover,
 .contact-link:focus {
@@ -165,6 +178,7 @@ ul {
     margin: 0 auto;
     border-radius: 4px;
     border: none;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .click:hover,
 .click:focus {
@@ -192,11 +206,6 @@ ul {
     align-items: flex-start;
     gap: 8px;
 }
-/* .img {
-    padding: 24px 100px;
-    
-    margin-bottom: 8px;
-} */
 .integral-parts-img {
     border: 1px solid  #8E8F99;
     border-radius: 4px;
@@ -229,6 +238,7 @@ ul {
     background-color: #FFFFFF;
     width: calc((100% - 72px) / 4);
     border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 }
 .our-team .subtitle {
     margin-bottom: 72px;
@@ -247,6 +257,7 @@ ul {
     letter-spacing: 0.02em;
     line-height: 1.5;
     text-align: center;
+    margin-bottom: 8px;
 }
 .our-team-links-list {
     display: flex;
@@ -254,21 +265,19 @@ ul {
     align-items: center;
     gap: 24px;
 }
-.se {
-    width: 100%;
-    height: 100%;
-}
 .our-team-link-part {
-
-}
-.our-team-links {
-    background-color:  #4D5AE5;
-    border-radius: 50%;
     width: 40px;
     height: 40px;
 }
-
-/*Секція Our portfolio */
+.our-team-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #4D5AE5;
+    border-radius: 50%;
+}
 .our-portfolio .subtitle {
     margin-bottom: 72px;
 }
@@ -282,6 +291,34 @@ ul {
 .part-list {
     width: calc((100% - 48px) / 3);
     background: #FFF;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+}
+.part-list:hover {
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+}
+.image-change {
+    position: relative;
+    overflow: hidden;
+}
+.overlay {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transform: translateY(100%);
+    background-color: #4D5AE5;
+    color: #F4F4FD;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px 32px;
+}
+.part-list:hover .overlay {
+    transform: translateY(0%);
 }
 .about-part {
     padding: 32px 16px;
@@ -301,7 +338,10 @@ ul {
 
 /* Footer */
 
-
+.lower-part .container {
+    display: flex;
+    gap: 120px;
+}
 .lower-part{
    background-color: #2E2F42; 
    padding-top: 100px;
@@ -320,3 +360,30 @@ ul {
     line-height: 1.5;
     letter-spacing: 0.02em;
 }
+.link-title {
+    color: #FFF;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    margin-bottom: 16px;
+}
+.footer-links-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+.footer-link-part {
+    width: 40px;
+    height: 40px;
+}
+ .footer-links {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:  #4D5AE5;
+    border-radius: 50%;
+ }   
