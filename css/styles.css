@@ -48,13 +48,12 @@ body {
 /*Секція Navigation*/
 .top-header {
     border-bottom: 1px solid #e7e9fc;
+    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
 }
 .top-header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0px 1px 6px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 2px 1px 0px rgba(46, 47, 66, 0.08);
-
 }
 .navigation {
     display: flex;
@@ -91,11 +90,15 @@ body {
     text-decoration: none;
     transition: color, background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 } 
+.first-link {
+    color: #404bbf;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1)
+}
 .nav-link:hover::after {
-    position: absolute;
-    bottom: 0;
-    left: 0;
     content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1px;
     width: 48px;
     height: 4px;
     border-radius: 2px;
@@ -143,10 +146,10 @@ ul {
     text-align: center;
     background-color: #2E2F42;
     background-image: linear-gradient(
-        rgba(46, 47, 66, 0.70),
-        rgba(46, 47, 66, 0.70)
-    ),
-    url("../images/main_background/people-office 2.jpg");
+        rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)
+        ), 
+        url(../images/main_background/people-office2.jpg);
     max-width: 1440px;
     background-size: cover;
     background-repeat: no-repeat;
