@@ -151,6 +151,7 @@ ul {
         ), 
         url(../images/main_background/people-office2.jpg);
     max-width: 1440px;
+    margin: 0 auto;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
